@@ -1,0 +1,15 @@
+{
+  "name": "mono-repo",
+  "private": true,
+  "packageManager": "pnpm@9",
+  "scripts": {
+    "dev:host": "pnpm --filter host dev",
+    "build:host": "pnpm --filter host build",
+    "build:app-a": "pnpm --filter app-a build",
+    "build:app-b": "pnpm --filter app-b build",
+    "build:all": "pnpm --filter app-a build && pnpm --filter app-b build && pnpm --filter host build"
+  },
+  "dependencies": {
+    "pinia": "^3.0.4"
+  }
+}
