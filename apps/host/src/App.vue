@@ -1,5 +1,5 @@
 <script setup>
-  import { onMounted, ref, watch } from 'vue'
+  import { watch } from 'vue'
   import { useRoute } from 'vue-router'
   import { useAuthStore } from '@repo/auth'
 

@@ -7,9 +7,10 @@
     "build:host": "pnpm --filter host build",
     "build:app-a": "pnpm --filter app-a build",
     "build:app-b": "pnpm --filter app-b build",
-    "build:all": "pnpm --filter app-a build && pnpm --filter app-b build && pnpm --filter host build"
+    "build:all": "pnpm --filter host build && pnpm --filter app-a build && pnpm --filter app-b build"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "pinia": "^3.0.4"
   }
 }
