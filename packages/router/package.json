@@ -1,5 +1,5 @@
 {
-  "name": "@repo/router",
+  "name": "@packages/router",
   "private": true,
   "version": "0.0.0",
   "main": "src/index.js"

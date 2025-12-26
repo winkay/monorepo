@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { useAuthStore } from '../../auth'
 
-export function httpRequest() {
+export default function httpRequest(baseURL) {
   const instance = axios.create({
+    baseURL,
     timeout: 5000
   })
 
@@ -15,7 +16,11 @@ export function httpRequest() {
   })
 
   instance.interceptors.response.use(
-    (res) => res.data,
+    (res) => {
+      if (res.status === 200) {
+        return res.data
+      }
+    },
     (err) => {
       // 统一错误处理
       return Promise.reject(err)

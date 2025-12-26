@@ -1,5 +1,5 @@
 {
-  "name": "@repo/http",
+  "name": "@packages/http",
   "private": true,
   "version": "0.0.0",
   "main": "src/index.js"

@@ -1,7 +1,7 @@
 <script setup>
   import { watch } from 'vue'
   import { useRoute } from 'vue-router'
-  import { useAuthStore } from '@repo/auth'
+  import { useAuthStore } from '@packages/auth'
 
   const auth = useAuthStore()
 

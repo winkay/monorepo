@@ -7,7 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '@repo': path.resolve(__dirname, '../../packages')
+      '@packages': path.resolve(__dirname, '../../packages')
     }
   },
   build: {
@@ -29,9 +29,13 @@ export default defineConfig({
       }
     }
   },
-  '/api-a': {
-    target: 'http://127.0.0.1:8080',
-    changeOrigin: true,
-    rewrite: (path) => path.replace(/^\/api-a/, '')
+  server: {
+    proxy: {
+      '/api-a': {
+        target: 'http://127.0.0.1:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-a/, '')
+      }
+    }
   }
 })
