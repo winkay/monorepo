@@ -9,8 +9,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
       '@packages': path.resolve(__dirname, '../../packages'),
       '@apps': path.resolve(__dirname, '../../apps'),
-      '@app-a': path.resolve(__dirname, '../apps/app-a/src'),
-      '@app-b': path.resolve(__dirname, '../apps/app-b/src')
+      '@app-a': path.resolve(__dirname, '../../apps/app-a/src'),
+      '@app-b': path.resolve(__dirname, '../../apps/app-b/src')
     }
   },
   build: {

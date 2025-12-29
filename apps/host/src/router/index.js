@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AppARoot from '@apps/app-a/src/AppRoot.vue'
-import AppARouters from '@apps/app-a/src/router.js'
+// import AppARoot from '@apps/app-a/src/AppRoot.vue'
+// import AppARouters from '@apps/app-a/src/router.js'
+import { AppRoot as AppARoot, routes as AppARouters } from '@app-a/main.js'
 
-import AppBRoot from '@apps/app-b/src/AppRoot.vue'
-import AppBRouters from '@apps/app-b/src/router.js'
+// import AppBRoot from '@apps/app-b/src/AppRoot.vue'
+// import AppBRouters from '@apps/app-b/src/router.js'
+import { AppRoot as AppBRoot, routes as AppBRouters } from '@app-b/main.js'
 
 export default createRouter({
   history: createWebHistory(),
